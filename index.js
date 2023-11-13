@@ -1,7 +1,11 @@
-const express=require('express')
-const app=express()
-const port=3000
+const express = require("express");
 
-app.get('/',(req,res)=>res.send("hello world"))
+const app = express();
 
-app.listen(port,()=>console.log(`run in ${port}`))
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
